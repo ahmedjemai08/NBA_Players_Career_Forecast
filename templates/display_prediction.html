@@ -1,0 +1,31 @@
+
+<html>
+    <head>
+        <title>Tutorial</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 class="text-center">Player prediction</h1>
+
+        {% if prediction  == 1 %}
+        
+        <p class="text-center"> {{player_name}} is Really Good! </p>
+        <p class="text-center"> You should probably hire him now!. </p>
+        <p class="text-center"> probability of Success {{proba_of_success}} </p>
+        
+
+        {% endif %}
+
+        {% if prediction  == 0 %}
+        <p class="text-center"> {{player_name}} Will probably not make it. </p>
+        <p class="text-center"> You should probably not hire him now. </p>
+        <p class="text-center"> probability of failure {{proba_of_failure}} </p>
+        
+        {% endif %}
+
+        <p class="text-center"> Here is your prediction's details </p>
+        <center> <img src="{{shap_prediction}}">  </center>
+    
+    </body>
+
+</html>

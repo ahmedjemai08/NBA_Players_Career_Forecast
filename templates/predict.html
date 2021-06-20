@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prediction</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <h1 class="text-center">NBA Player career forecast</h1>
+
+        <div class="container">
+            <div class="row">
+              <div class="col">
+                <h1>Make your prediction</h1>
+                <hr>
+                <form action="/predict" method="POST">
+
+                    <div class="form-group">
+                      <label>Name</label>
+                      <input type="text" class="form-control" id="Name" name="Name" placeholder="Select a Name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>GP</label>
+                        <input type="text" class="form-control" id="GP" name="GP" placeholder="Select GP">
+                    </div>
+
+                    <div class="form-group">
+                        <label>MIN</label>
+                        <input type="text" class="form-control" id="MIN" name="MIN" placeholder="Select MIN">
+                    </div>
+
+                    <div class="form-group">
+                        <label>PTS</label>
+                        <input type="text" class="form-control" id="PTS" name="PTS" placeholder="Select a PTS">
+                    </div>
+
+                    <div class="form-group">
+                        <label>FGM</label>
+                        <input type="text" class="form-control" id="FGM" name="FGM" placeholder="Select a FGM">
+                    </div>
+
+                    <div class="form-group">
+                        <label>FGA</label>
+                        <input type="text" class="form-control" id="FGA" name="FGA" placeholder="Select a FGA">
+                    </div>
+
+                    <div class="form-group%">
+                        <label>FG%</label>
+                        <input type="text" class="form-control" id="FG%" name="FG%" placeholder="Select a FG%">
+                    </div>
+
+                    <div class="form-group">
+                        <label>3P Made</label>
+                        <input type="text" class="form-control" id="3P Made" name="3P Made" placeholder="Select a 3P Made">
+                    </div>
+
+                    <div class="form-group">
+                        <label>3PA</label>
+                        <input type="text" class="form-control" id="3PA" name="3PA" placeholder="Select a 3PA">
+                    </div>
+
+                    <div class="form-group%">
+                        <label>3P%</label>
+                        <input type="text" class="form-control" id="3P%" name="3P%" placeholder="Select a 3P%">
+                    </div>
+
+                    <div class="form-group">
+                        <label>FTM</label>
+                        <input type="text" class="form-control" id="FTM" name="FTM" placeholder="Select a FTM">
+                    </div>
+
+                    <div class="form-group">
+                        <label>FTA</label>
+                        <input type="text" class="form-control" id="FTA" name="FTA" placeholder="Select a FTA">
+                    </div>
+
+                    <div class="form-group%">
+                        <label>FT%</label>
+                        <input type="text" class="form-control" id="FT%" name="FT%" placeholder="Select a FT%">
+                    </div>
+
+                    <div class="form-group">
+                        <label>OREB</label>
+                        <input type="text" class="form-control" id="OREB" name="OREB" placeholder="Select a OREB">
+                    </div>
+
+                    <div class="form-group">
+                        <label>DREB</label>
+                        <input type="text" class="form-control" id="DREB" name="DREB" placeholder="Select a DREB">
+                    </div>
+
+                    <div class="form-group">
+                        <label>REB</label>
+                        <input type="text" class="form-control" id="REB" name="REB" placeholder="Select a REB">
+                    </div>
+
+                    <div class="form-group">
+                        <label>AST</label>
+                        <input type="text" class="form-control" id="AST" name="AST" placeholder="Select a AST">
+                    </div>
+
+                    <div class="form-group">
+                        <label>STL</label>
+                        <input type="text" class="form-control" id="STL" name="STL" placeholder="Select a STL">
+                    </div>
+
+                    <div class="form-group">
+                        <label>BLK</label>
+                        <input type="text" class="form-control" id="BLK" name="BLK" placeholder="Select a BLK">
+                    </div>
+
+                    <div class="form-group">
+                        <label>TOV</label>
+                        <input type="text" class="form-control" id="TOV" name="TOV" placeholder="Select a TOV">
+                    </div>
+
+                    
+                    <button type="submit" class="btn btn-primary">Predict</button>
+                    {% if feedback %}
+                    <p class="text-danger float-right">{{ feedback }}</p>
+                    {% endif %}
+
+
+                  </form>
+                  
+              </div>
+            </div>
+          </div>
+
+    </body>
+
+</html>
