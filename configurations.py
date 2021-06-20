@@ -11,9 +11,7 @@ cols_to_drop = [target]
 date = datetime.now().strftime("%Y_%m_%d-%I:%M:%S_%p")
 feature_names =['GP','MIN','PTS','FGM','FGA','FG%','3P Made','3PA','3P%','FTM','FTA','FT%','OREB','DREB','REB','AST','STL','BLK','TOV']
 cols_to_drop = ['Name', 'FGA', 'FGM']
-features = ['GP', 'MIN', 'PTS', 'FG%', 'FTM', 
-            'FTA', 'FT%', 'OREB','DREB', 'REB', 'STL', 
-            'BLK', 'TOV', 'TARGET_5Yrs']
+features = ['GP', 'MIN', 'PTS', 'FG%', 'FTM', 'FTA', 'FT%', 'OREB', 'DREB', 'REB','STL', 'BLK', 'TOV', target]
 # 2. Paths
 dirs = ['./static/images', './pickles', './model']
 data_path = './nba_logreg.csv'
@@ -32,7 +30,7 @@ picfolder = os.path.join('./static', 'images')
 # 3. Models params
 learning_rate = 0.005
 loss = 'Logloss'
-iterations = 400
+iterations = 4000
 early_stopping_rounds = 50
 depth = 4 
 

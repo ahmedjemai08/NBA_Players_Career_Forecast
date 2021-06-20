@@ -11,7 +11,7 @@ import argparse
 
 # get timestamp to choose wich model to use in production
 parser = argparse.ArgumentParser(description='Please input timestamp')
-parser.add_argument('--timestamp',help='timestamp', default='2021_06_20-10:44:43_PM')
+parser.add_argument('--timestamp',help='timestamp', default='2021_06_21-12:05:59_AM')
 args = parser.parse_args()
 timestamp = str(args.timestamp)
 
@@ -44,7 +44,7 @@ def predict():
         missing = list()
         is_not_numeric = list()
         for k, v in req.items():
-            if k not in conf.cols_to_drop:
+            if k in conf.features:
                 input_data.append(v)
             if v=="":
                 missing.append(k)

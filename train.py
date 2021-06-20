@@ -20,7 +20,7 @@ def data_prep(data):
     res_data = copy.deepcopy(data)
     res_data['3P%'] = res_data['3P%'].fillna(0)
     res_data[conf.target] = res_data[conf.target].astype(int)
-    res_data.drop(conf.cols_to_drop, axis=1, inplace=True)
+    #res_data.drop(conf.cols_to_drop, axis=1, inplace=True)
     return res_data
 
 
@@ -45,6 +45,7 @@ def main():
     # dataprep
     print('- Data Prep')
     df = data_prep(raw_data)
+
     X = df[conf.features].drop(conf.target, axis=1)
     y = df[conf.target]
 
@@ -101,6 +102,7 @@ def main():
 
     # success message
     print('Model Trained Succesfully !')
+    print(X_train.columns)
 
 
 if __name__ == '__main__':
