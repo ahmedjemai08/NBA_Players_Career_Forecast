@@ -10,10 +10,10 @@
 
 ## 2. Folders
 * `model` : contains saved models 
-* `pickles` : contains saved Shap values explainers
-* `images` : contains various images,  containing model performance and prediction shap value
+* `pickles` : contains saved Shap values explainers (will be created when running train.py)
+* `static` : contains various images,  containing model performance and prediction shap value (will be created when running train.py)
 * `templates` : contains .html templates
-* `catboost_info` : temp files containing necessary information about the trained model
+* `catboost_info` : temp files containing necessary information about the trained model (will be created when running train.py)
 
 ## 3. Other files
 * `Test Technique.ipynb` : Notebook containing analysis about training and testing the model
